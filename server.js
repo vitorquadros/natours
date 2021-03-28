@@ -1,9 +1,10 @@
 const fs = require('fs');
 const express = require('express');
-const { ppid } = require('process');
+const morgan = require('morgan');
 
 const app = express();
 
+app.use(morgan('dev'));
 app.use(express.json());
 
 const tours = JSON.parse(
