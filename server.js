@@ -90,19 +90,22 @@ const deleteUser = (req, res) => {
     message: 'This route is not yet defined!',
   });
 };
+const tourRouter = express.Router();
+const userRouter = express.Router();
 
-// app.get('/api/v1/tours', getAllTours);
-// app.post('/api/v1/tours', createTour);
-app.get('/api/v1/tours/:id', getTour);
+tourRouter.get('/:id', getTour);
 
-app.route('/api/v1/tours').get(getAllTours).post(createTour);
+tourRouter.route('/').get(getAllTours).post(createTour);
 
-app.route('/api/v1/users').get(getAllUsers).post(createUser);
-app
+userRouter.route('/api/v1/users').get(getAllUsers).post(createUser);
+userRouter
   .route('/api/v1/users/:id')
   .get(getUser)
   .patch(updateUser)
   .delete(deleteUser);
+
+app.use('/api/v1/tours', tourRouter);
+app.use('/api/v1/tours', userRouter);
 
 app.listen(3000, () => {
   console.log('Running...');
