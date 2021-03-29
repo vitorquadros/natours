@@ -17,18 +17,12 @@ exports.getAllTours = (req, res) => {
 exports.getTour = (req, res) => {
   const { id } = req.params;
   const tour = tours.find((el) => el.id === Number(id));
-  if (tour) {
-    res.status(200).json({
-      status: 'success',
-      data: {
-        tour,
-      },
-    });
-  } else {
-    res.status(404).json({
-      status: 'not found',
-    });
-  }
+  res.status(200).json({
+    status: 'success',
+    data: {
+      tour,
+    },
+  });
 };
 
 exports.createTour = (req, res) => {
@@ -47,4 +41,16 @@ exports.createTour = (req, res) => {
       });
     }
   );
+};
+
+exports.updateTour = (req, res) => {
+  res.status(500).json({
+    message: 'This route is not yet defined!',
+  });
+};
+
+exports.deleteTour = (req, res) => {
+  res.status(500).json({
+    message: 'This route is not yet defined!',
+  });
 };
