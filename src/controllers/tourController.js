@@ -4,6 +4,16 @@ const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/../../dev-data/data/tours-simple.json`)
 );
 
+exports.checkId = (req, res, next, value) => {
+  if (req.params.id * 1 > tours.length) {
+    return res.status(404).json({
+      status: 'not found',
+      message: 'invalid id',
+    });
+  }
+  next();
+};
+
 exports.getAllTours = (req, res) => {
   res.status(200).json({
     status: 'success',
