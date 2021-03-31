@@ -31,7 +31,19 @@ exports.getAllTours = async (req, res) => {
       query = query.select('-__v'); // default - sending the data without the mongo '__v' field
     }
 
-    // 5 - executing query
+    // 5 - pagination
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 100;
+    const skip = (page - 1) * limit;
+
+    query = query.skip(skip).limit(limit);
+
+    if (req.query.page) {
+      const numTours = await Tour.countDocuments();
+      if (skip >= numTours) throw new Error('This page does not exists');
+    }
+
+    // 6 - executing query
     const tours = await query;
 
     res.status(200).json({
