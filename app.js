@@ -5,7 +5,7 @@ const userRouter = require('./src/routes/userRoutes');
 
 const app = express();
 
-if (process.env.NODE_ENV === 'developmen') {
+if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
