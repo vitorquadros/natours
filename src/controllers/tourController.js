@@ -61,7 +61,7 @@ exports.updateTour = catchAsync(async (req, res, next) => {
     runValidators: true, // run the model validators again
   });
 
-  if (!tour) {
+  if (!newTour) {
     return next(new AppError('No tour found with that ID', 404));
   }
 
