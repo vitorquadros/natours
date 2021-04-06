@@ -26,6 +26,15 @@ const app = require('./app');
 
 // STARTING SERVER
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Running on ${process.env.NODE_ENV} mode...`);
+});
+
+process.on('unhandledRejection', (err) => {
+  console.log(err.name, err.message);
+  console.log('Unhandled Rejection! Shutting down..');
+  server.close(() => {
+    // closing the server before exiting the process to finish reqs running
+    process.exit(1);
+  });
 });
