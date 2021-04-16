@@ -14,3 +14,22 @@ exports.deleteOne = (Model) =>
       message: null,
     });
   });
+
+exports.updateOne = (Model) =>
+  catchAsync(async (req, res, next) => {
+    const newDoc = await Model.findByIdAndUpdate(req.params.id, req.body, {
+      new: true, // will return the new document
+      runValidators: true, // run the model validators again
+    });
+
+    if (!newDoc) {
+      return next(new AppError('No document found with that ID', 404));
+    }
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        data: newDoc,
+      },
+    });
+  });
