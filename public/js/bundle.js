@@ -6661,7 +6661,7 @@ exports.displayMap = void 0;
 
 /* eslint-disable */
 var displayMap = function displayMap(locations) {
-  mapboxgl.accessToken = 'pk.eyJ1Ijoidml0b3JxdWFkcm9zIiwiYSI6ImNrb2FnZTBiYjJxNXcycHF3dDNubW5sNXEifQ.Z3SqEWro8ER6X8H3KD0GPQ';
+  mapboxgl.accessToken = 'pk.eyJ1Ijoidml0b3JxdWFkcm9zIiwiYSI6ImNrb2FnOWozajF4Z20ydnM3MWg1M3MybnIifQ.hLJD_iAJa_F7odui4ibEPw';
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/vitorquadros/ckoai0dx005sy17qirfgmqvcm',
@@ -8977,7 +8977,7 @@ var userDataForm = document.querySelector('.form-user-data');
 var userPasswordForm = document.querySelector('.form-user-password'); // DELEGATION
 
 if (mapBox) {
-  var locations = JSON.parse(mapbox.dataset.locations);
+  var locations = JSON.parse(mapBox.dataset.locations);
   (0, _mapbox.displayMap)(locations);
 }
 
@@ -9071,7 +9071,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38023" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42367" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -9248,4 +9248,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/bundle.js.map
+//# sourceMappingURL=bundle.js.map
