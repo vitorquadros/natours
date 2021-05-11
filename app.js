@@ -11,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const tourRouter = require('./src/routes/tourRoutes');
 const userRouter = require('./src/routes/userRoutes');
 const reviewRouter = require('./src/routes/reviewRoutes');
+const bookingRouter = require('./src/routes/bookingRoutes');
 const AppError = require('./src/Utils/appError');
 const globalErrorHandler = require('./src/controllers/errorController');
 const viewRouter = require('./src/routes/viewRoutes');
@@ -74,6 +75,7 @@ app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
+app.use('/api/v1/bookings', bookingRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
