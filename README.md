@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="./logo-green-small.png" alt="Natours Icon" width="100"/>
+   <img src="./public/img/logo-green-small.png" alt="Natours Icon" width="100"/>
 </p>
 
 <h1 align="center">Natours</h1>
