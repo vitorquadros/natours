@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/github/license/vitorquadros/natours?color=%2355c57a&style=plastic">
 
   <a href="https://codingheroes.io/">
-    <img src="https://img.shields.io/badge/content-jonas.io-%2355c57a">
+    <img src="https://img.shields.io/badge/content-jonas.io-%2355c57a?style=plastic">
   </a>
 </p>
 
@@ -58,10 +58,10 @@
 
 ### Main technologies used
 
-- [Node.JS]()
-- [Express]()
-- [MongoDB]()
-- [Pug]()
+- [Node.JS](https://github.com/nodejs/node)
+- [Express](https://github.com/expressjs/express)
+- [MongoDB](https://github.com/mongodb/mongo)
+- [Pug](https://github.com/pugjs/pug)
 
 # :bookmark_tabs: Documentation
 
