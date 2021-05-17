@@ -11,9 +11,6 @@
 
   <img src="https://img.shields.io/github/license/vitorquadros/natours?color=%2355c57a&style=plastic">
 
-  <a href="https://codingheroes.io/">
-    <img src="https://img.shields.io/badge/content-jonas.io-%2355c57a?style=plastic">
-  </a>
 </p>
 
 > This project is an website to explore/buy guided tours and a API to manage the tours, users, reviews, bookings and authentication.
@@ -24,8 +21,6 @@
 <a href="#rocket-features">Features</a>
 ·
 <a href="#gear-technologies">Technologies</a>
-·
-<a href="#bookmarktabs-documentation">Documentation</a>
 ·
 <a href="#eyes-preview">Preview</a>
 ·
@@ -48,6 +43,8 @@
 
 - Email
 
+- Geolocation
+
 ### Website
 
 - Interface for home, account and tour page
@@ -63,11 +60,38 @@
 - [MongoDB](https://github.com/mongodb/mongo)
 - [Pug](https://github.com/pugjs/pug)
 
-# :bookmark_tabs: Documentation
+<!-- # :bookmark_tabs: Documentation -->
 
 # :eyes: Preview
 
+<details>
+<summary>Click to expand image section</summary>
+
+### Home
+
+<img src="./github/home.png">
+
+### Account
+
+<img src="./github/account.png">
+
+### Tour Page
+
+<img src="./github/tour1.png">
+<img src="./github/tour2.png">
+<img src="./github/tour3.png">
+<img src="./github/tour4.png">
+<img src="./github/tour5.png">
+
+</details>
+
 # :question: How to test
+
+### Wanna run the application?
+
+1. Clone the repository and install the dependencies with `npm install`
+
+2. Create a `.env` file and fill the envinroment variables, all the application variables are in [./github/env.txt](./github/env.txt)
 
 # :copyright: License
 
